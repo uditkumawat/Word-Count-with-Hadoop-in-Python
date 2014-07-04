@@ -1,0 +1,16 @@
+#mapper.py
+
+import sys
+
+#input comes from STDIN
+for line in sys.stdin:
+    #remove leading and trailing seqeunce
+    line=line.strip()
+    #split the line into words
+    words=line.split()
+    for word in words:
+        #What we output here will be the input for the reduce step
+        #that is input to reducer.py
+        print '%s\t%s'%(word,1)
+
+        
